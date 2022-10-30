@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant ordering app</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <h2>Jimmy's Diner</h2>
+        <h4>The best burgers and pizzas in town.</h4>
+    </header>
+    <main>
+        <section class="menu" id="menu-section">
+        </section>
+        <section class="checkout-section">
+            <div class="checkout-container hidden" id="checkout-c">
+                <h3 class="your-order">Your Order</h3>
+                <div class="order" id="order-item">
+                    <!-- orders here -->
+                </div>
+                <div class="total-price">
+                    <h2 class="t-price">Total Price: </h2>
+                    <h3 class="t-price-value" id="t-price-amount"></h3>
+                </div>
+                <button class="complete-order-btn" data-completeo="c1">Complete order</button>
+            </div>
+        </section>
+        <div class="sale-b-container" id="sale-b-c">
+            <div class="sale-box">
+                <i class="fa-solid fa-xmark close-btn-s" id="close-sale-modal" data-closesale="c2"></i>
+                <h2>Burger + Beer</h2>
+                <h3>50% off!</h3>
+            </div>
+        </div>
+        <!-- payment modal (hidden)-->
+        <div class="payment-box-container hidden" id="card-info">
+            <div class="payment-box">
+                <h2>Enter card details</h2>
+                <form class="form" id="payment-form">
+                    <div>
+                        <input type="text" name="name" placeholder="Enter your name" id="name" required autocomplete="off">
+                        <input type="text" name="card-number" placeholder="Enter your card number" required autocomplete="off">
+                        <input type="text" name="CVV" placeholder="Enter CVV" required autocomplete="off">
+                    </div>
+                    <div>
+                        <button class="complete-order-btn" data-completep="c2" type="submit">Pay</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
